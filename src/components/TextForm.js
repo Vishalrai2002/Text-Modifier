@@ -59,9 +59,9 @@ export default function TextForm(props) {
     </div>
     <button className="btn btn-primary mx-1" onClick={handleUpClick}>Covert To Uppercase</button>
     <button className="btn btn-primary mx-1" onClick={handleLoClick}>Covert To Lowercase</button>
-    <button className="btn btn-primary mx-1" onClick={speak}>Listen Your Text</button>
     <button className="btn btn-primary mx-1" onClick={handleCopy}>Copy Text</button>
     <button className="btn btn-primary mx-1" onClick={handleExtraSpaces}>Remove Extra Spaces</button>
+    <button className="btn btn-warning mx-1" onClick={speak}>Listen Your Text</button>
     <button className="btn btn-danger mx-1" onClick={handleOnClear}>CLear Text</button>
 
 
