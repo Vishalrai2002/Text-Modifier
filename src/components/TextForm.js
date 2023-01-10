@@ -57,18 +57,18 @@ export default function TextForm(props) {
     <div className="mb-3">
         <textarea className="form-control" value={text} onChange={handleOnChange} style={{backgroundColor:props.mode==='dark'?'#042743':'white',color:props.mode==='dark'?'white':'black'}}  id="my-Box" rows="8"></textarea>
     </div>
-    <button className="btn btn-primary mx-1" onClick={handleUpClick}>Covert To Uppercase</button>
-    <button className="btn btn-primary mx-1" onClick={handleLoClick}>Covert To Lowercase</button>
-    <button className="btn btn-primary mx-1" onClick={handleCopy}>Copy Text</button>
-    <button className="btn btn-primary mx-1" onClick={handleExtraSpaces}>Remove Extra Spaces</button>
-    <button className="btn btn-warning mx-1" onClick={speak}>Listen Your Text</button>
-    <button className="btn btn-danger mx-1" onClick={handleOnClear}>CLear Text</button>
+    <button className="btn btn-primary mx-1 my-1" onClick={handleUpClick}>Covert To Uppercase</button>
+    <button className="btn btn-primary mx-1 my-1" onClick={handleLoClick}>Covert To Lowercase</button>
+    <button className="btn btn-primary mx-1 my-1" onClick={handleCopy}>Copy Text</button>
+    <button className="btn btn-primary mx-1 my-1" onClick={handleExtraSpaces}>Remove Extra Spaces</button>
+    <button className="btn btn-warning mx-1 my-1" onClick={speak}>Listen Your Text</button>
+    <button className="btn btn-danger mx-1 my-1" onClick={handleOnClear}>CLear Text</button>
 
 
     </div>
     <div className="conatiner" my-3 style={{color:props.mode==='dark'?'white':'black'}}>
         <h2>Your text Summary</h2>
-        <p>{text.split(" ").length} words and {text.length} characters</p>
+        <p>{text.split(" ").filter((element)=>{return element.length!==0}).length} words and {text.length} characters</p>
         <p>{0.008*text.split("").length} minutes to read</p>
     <h2>Preview</h2>
     <p>{text.length>0?text:"Enter something in the Text-Box to Preview it here!"}</p>
