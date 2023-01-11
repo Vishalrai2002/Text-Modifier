@@ -56,7 +56,7 @@ function App() {
                 <Route exact path='/' element={<TextForm showAlert = {showAlert} heading = "Enter the text to analyze" mode = {mode}/>} />
         </Routes> */}
 
-        <TextForm showAlert={showAlert} heading ="Enter the text to analyze below" mode={mode}/>  {/* this line is added by me to remove route  */}
+        <TextForm showAlert={showAlert} heading ="Enter Text to Analyze below" mode={mode}/>  {/* this line is added by me to remove route  */}
         </div>
   {/* </BrowserRouter> */}
 
